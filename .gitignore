@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.julia/
+
+# Local training products. Small, reviewed summary tables and figures under
+# results/ are intentionally versioned.
+checkpoints/
+seed_runs/
+slurm-*.log
+*.pt
+*.pth
+*.npz
+
+# Editor and operating-system files.
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

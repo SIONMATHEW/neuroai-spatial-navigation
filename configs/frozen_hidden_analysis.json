@@ -1,0 +1,15 @@
+{
+  "results_root": "objective_results",
+  "analysis": "both",
+  "primary_set": "validation-accuracy-matched seeds 2-5",
+  "sensitivity_set": "validation-best seeds 1-5",
+  "probe_noise_sd": 0.0,
+  "probe_trajectories": 1024,
+  "hidden_activity": "post-tanh",
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "ridge_alphas": [0.1, 1.0, 10.0, 100.0],
+  "bootstrap_draws": 1000,
+  "effect_threshold_delta_r2": 0.01,
+  "minimum_explained_r2": 0.01
+}

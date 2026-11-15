@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the associated UROP report and this software repository."
+title: "NeuroAI Spatial Navigation Experiments"
+type: software
+authors:
+  - family-names: "Mathew"
+    given-names: "Saayuj Ion"
+repository-code: "https://github.com/SIONMATHEW/neuroai-spatial-navigation"
+version: 0.1.0
+date-released: 2026-11-15
+license: MIT

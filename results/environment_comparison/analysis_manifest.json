@@ -1,0 +1,27 @@
+{
+  "comparison": "open versus occluded, factorized objective only",
+  "checkpoint": "final",
+  "training_noise_sd": 0.2,
+  "test_and_probe_noise_sd": 0.25,
+  "test_trials": 4096,
+  "probe_trials": 512,
+  "probe_split": "70% fit, 15% validation, 15% test by whole trajectory",
+  "test_trajectory_seed": "4000000 + training seed",
+  "probe_trajectory_seed": "6000000 + training seed",
+  "ridge_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "bootstrap_draws": 200,
+  "synthetic_recovery": {
+    "median_gain_known_additive_units": -0.001838249677579562,
+    "median_gain_known_interaction_units": 0.8094873001146183,
+    "passed": true
+  },
+  "environment_manifests_verified": 5,
+  "device": "cuda",
+  "gpu": "NVIDIA H100 NVL MIG 3g.47gb"
+}

@@ -1,0 +1,27 @@
+{
+  "n_seeds": 5,
+  "metrics_mean": {
+    "truth_mapping_accuracy": 0.9954248721019183,
+    "truth_place_mapping_accuracy": 1.0,
+    "truth_surface_mapping_accuracy": 0.9954248721019183,
+    "continuous_invalid_prediction_rate": 0.004611648041120343,
+    "continuous_position_accuracy": 0.6384983120624781,
+    "conjunction_position_accuracy": 0.8933531908646735,
+    "continuous_surface_accuracy": 0.4998497820512734,
+    "conjunction_surface_accuracy": 0.8795516732000035,
+    "continuous_conjunction_accuracy": 0.3625033914813803,
+    "conjunction_conjunction_accuracy": 0.8257117525063423,
+    "continuous_position_error_median": 0.6977205038070678,
+    "conjunction_position_error_median": 0.7071067094802856,
+    "ideal_position_error_median": 0.7071067094802856,
+    "continuous_gaze_error_median": 1.1697408199310302,
+    "conjunction_gaze_error_median": 1.0438627004623413,
+    "ideal_gaze_error_median": 0.9999998211860657,
+    "continuous_position_error_mean": 0.9880470395088196,
+    "conjunction_position_error_mean": 0.9287742257118226,
+    "ideal_position_error_mean": 0.7071067333221436,
+    "continuous_gaze_error_mean": 1.5265501260757446,
+    "conjunction_gaze_error_mean": 1.36151442527771,
+    "ideal_gaze_error_mean": 1.1373883724212646
+  }
+}

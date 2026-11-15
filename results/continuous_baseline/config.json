@@ -1,0 +1,27 @@
+{
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "input_channels": [
+    "movement",
+    "distance",
+    "texture"
+  ],
+  "input_dim": 36,
+  "hidden_dim": 256,
+  "min_steps": 80,
+  "max_steps": 120,
+  "batch_size": 64,
+  "train_updates": 3000,
+  "eval_trials": 4096,
+  "learning_rate": 0.001,
+  "gradient_clip": 1.0,
+  "bin_size": 2.0,
+  "wall_bin_size": 5.0,
+  "device": "cuda",
+  "evaluation_noise_std": 0.0
+}

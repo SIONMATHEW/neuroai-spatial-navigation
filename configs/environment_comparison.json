@@ -1,0 +1,30 @@
+{
+  "comparison": "open versus occluded environment",
+  "objective": "factorized",
+  "seeds": [1, 2, 3, 4, 5],
+  "input_dim": 36,
+  "hidden_units": 256,
+  "environments": {
+    "open": {"place_bins": 25, "surface_bins": 8},
+    "occluded": {"place_bins": 21, "surface_bins": 24}
+  },
+  "training": {
+    "updates": 4000,
+    "batch_size": 256,
+    "validation_trials": 1024,
+    "validation_every": 50,
+    "learning_rate": 0.001,
+    "gradient_clip": 3.0,
+    "training_noise_sd": 0.2,
+    "optimizer": "Adam",
+    "scheduler": "none"
+  },
+  "evaluation": {
+    "checkpoint": "final",
+    "test_trials": 4096,
+    "probe_trials": 512,
+    "noise_sd": 0.25,
+    "probe_split": [0.70, 0.15, 0.15],
+    "bootstrap_draws": 200
+  }
+}

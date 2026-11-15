@@ -1,0 +1,9 @@
+{
+  "role": "exploratory continuous-coordinate baseline",
+  "input_dim": 36,
+  "hidden_units": 256,
+  "outputs": ["position_x", "position_y", "gaze_x", "gaze_y"],
+  "loss": "masked mean squared error",
+  "comparison_model": "504-class conjunction RNN",
+  "note": "The historical script retains its original command-line defaults."
+}

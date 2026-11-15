@@ -1,0 +1,152 @@
+{
+  "protocol": {
+    "comparison": "frozen_tuned_settings_paired_clean_confirmation",
+    "selection_split": "validation",
+    "selection_metric": "exact_joint_top1_accuracy",
+    "checkpoint_rule": "strict highest validation accuracy; earliest tie",
+    "updates": 8000,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "gradient_clip": 3.0,
+    "scheduler": "none",
+    "val_trials": 1024,
+    "validate_every": 250,
+    "eval_trials": 4096,
+    "eval_batch_size": 256,
+    "validation_seed_base": 900000,
+    "test_seed_base": 2000000,
+    "target_accuracy": 0.83,
+    "also_accuracy_matched": true,
+    "match_validate_every": 50,
+    "target_tolerance": 0.005,
+    "pair_tolerance": 0.005,
+    "matching_rule": "validation-only: within target band and pair gap; minimize gap then target distance then updates",
+    "input_dim": 36,
+    "input_channels": [
+      "distance",
+      "movement",
+      "texture"
+    ],
+    "hidden_dim": 256,
+    "place_bins": 21,
+    "surface_bins": 24,
+    "min_steps": 80,
+    "max_steps": 120,
+    "bin_size": 2.0,
+    "wall_bin_size": 5.0,
+    "dt": 20.0,
+    "fov": 1.0471975511965976,
+    "head_direction_step": 1.0471975511965976,
+    "p_stay": 0.3333333333333333,
+    "p_hd": 0.8,
+    "evaluation_noise_std": 0.0,
+    "same_training_batches": true,
+    "same_recurrent_initialization": true,
+    "fresh_training_all_seeds": true,
+    "test_support_note": "Legacy unsupported_joint_rate means a predicted combination was not observed in this finite test sample, not proven impossible."
+  },
+  "requested_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "seeds": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "unmatched_seeds": [
+    1
+  ],
+  "comparison_kind": "validation_accuracy_matched_not_test_accuracy_matched",
+  "matching_by_seed": [
+    {
+      "seed": 1,
+      "status": "unmatched",
+      "reason": "No checkpoint pair met both validation tolerances",
+      "candidate_counts": {
+        "factorized": 4,
+        "conjunction": 0
+      }
+    },
+    {
+      "seed": 2,
+      "status": "matched",
+      "factorized": {
+        "update": 3750,
+        "accuracy": 0.8323516217744924,
+        "checkpoint": "checkpoints/accuracy_candidates/factorized_update_3750.pt",
+        "training_trials": 960000,
+        "training_valid_timesteps": 96004088
+      },
+      "conjunction": {
+        "update": 1850,
+        "accuracy": 0.8320298024224221,
+        "checkpoint": "checkpoints/accuracy_candidates/conjunction_update_1850.pt",
+        "training_trials": 473600,
+        "training_valid_timesteps": 47366080
+      },
+      "validation_gap": 0.0003218193520703183
+    },
+    {
+      "seed": 3,
+      "status": "matched",
+      "factorized": {
+        "update": 3550,
+        "accuracy": 0.8322644253765582,
+        "checkpoint": "checkpoints/accuracy_candidates/factorized_update_3550.pt",
+        "training_trials": 908800,
+        "training_valid_timesteps": 90898870
+      },
+      "conjunction": {
+        "update": 2000,
+        "accuracy": 0.8326646557530676,
+        "checkpoint": "checkpoints/accuracy_candidates/conjunction_update_2000.pt",
+        "training_trials": 512000,
+        "training_valid_timesteps": 51220838
+      },
+      "validation_gap": 0.00040023037650938065
+    },
+    {
+      "seed": 4,
+      "status": "matched",
+      "factorized": {
+        "update": 3750,
+        "accuracy": 0.8288426089343844,
+        "checkpoint": "checkpoints/accuracy_candidates/factorized_update_3750.pt",
+        "training_trials": 960000,
+        "training_valid_timesteps": 96007506
+      },
+      "conjunction": {
+        "update": 2150,
+        "accuracy": 0.8286857277326745,
+        "checkpoint": "checkpoints/accuracy_candidates/conjunction_update_2150.pt",
+        "training_trials": 550400,
+        "training_valid_timesteps": 55050666
+      },
+      "validation_gap": 0.00015688120170997966
+    },
+    {
+      "seed": 5,
+      "status": "matched",
+      "factorized": {
+        "update": 3450,
+        "accuracy": 0.8289411902805494,
+        "checkpoint": "checkpoints/accuracy_candidates/factorized_update_3450.pt",
+        "training_trials": 883200,
+        "training_valid_timesteps": 88315219
+      },
+      "conjunction": {
+        "update": 2000,
+        "accuracy": 0.8279629847008647,
+        "checkpoint": "checkpoints/accuracy_candidates/conjunction_update_2000.pt",
+        "training_trials": 512000,
+        "training_valid_timesteps": 51199810
+      },
+      "validation_gap": 0.0009782055796846434
+    }
+  ]
+}

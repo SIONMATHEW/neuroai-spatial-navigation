@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+testpaths = ["tests", "objective_comparison"]
+python_files = ["test_*.py"]
+addopts = "-ra"

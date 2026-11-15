@@ -1,0 +1,11 @@
+# The CUDA-enabled PyTorch build is platform-specific. The reported cluster
+# runs used torch 2.11.0+cu128; install the matching build for the target GPU.
+torch>=2.4,<3
+numpy>=2.0,<3
+matplotlib>=3.8,<4
+juliacall>=0.9.24,<0.10
+pytest>=8,<9
+
+# Python wrapper pinned to the research navigation API used by the final
+# environment workflow. Its juliapkg.json pins the corresponding Julia commit.
+RNNTrialStructures @ git+https://github.com/SIONMATHEW/RNNTrialStructures.py@a9d4b3b6f38dec6abf5f67f4a5cc6e4c0faf2b65

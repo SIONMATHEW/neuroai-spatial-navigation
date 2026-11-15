@@ -1,0 +1,30 @@
+{
+  "protocol": "clean paired objective comparison",
+  "objectives": ["factorized", "conjunction"],
+  "seeds": [1, 2, 3, 4, 5],
+  "updates": 8000,
+  "batch_size": 256,
+  "learning_rate": 0.001,
+  "gradient_clip": 3.0,
+  "scheduler": "none",
+  "validation_trials": 1024,
+  "validate_every_updates": 250,
+  "test_trials": 4096,
+  "hidden_units": 256,
+  "place_bins": 21,
+  "surface_bins": 24,
+  "input_channels": ["distance", "movement", "texture"],
+  "input_dimension": 36,
+  "evaluation_noise_standard_deviation": 0.0,
+  "paired_training_batches": true,
+  "paired_recurrent_initialization": true,
+  "checkpoint_rule": "highest validation exact-joint accuracy; earliest tie",
+  "accuracy_match": {
+    "target_validation_accuracy": 0.83,
+    "target_tolerance": 0.005,
+    "pair_tolerance": 0.005,
+    "validate_every_updates": 50,
+    "matched_seeds": [2, 3, 4, 5],
+    "unmatched_seeds": [1]
+  }
+}
