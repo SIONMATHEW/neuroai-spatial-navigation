@@ -18,3 +18,23 @@ bash submit_environment_comparison.sh
 
 The machine-readable protocol is in `../configs/environment_comparison.json`.
 The compact reviewed outputs are in `../results/environment_comparison/`.
+
+## Per-bin accuracy and SIC
+
+`evaluate_sic_bins.py` evaluates the frozen factorized networks on independent
+noisy test trajectories and reports the open arena's 25/8 place/surface bins
+and the occluded arena's 21/24 bins separately. It also computes place and
+surface Skaggs information for every post-tanh hidden unit using a separate
+probe bank.
+
+Each environment has its own untrained-network SIC null because its geometry,
+input distribution and label space differ. Consequently, the main population
+comparison is the fraction of units exceeding the environment-specific null,
+not a direct correspondence between unrelated bin identifiers. Run with:
+
+```bash
+sbatch run_sic_bins_h100.slurm
+```
+
+Set `ENVIRONMENT_RESULTS_ROOT` if the frozen result directory is stored at a
+different location.

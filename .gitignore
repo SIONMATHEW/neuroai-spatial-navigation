@@ -13,6 +13,8 @@ slurm-*.log
 *.pt
 *.pth
 *.npz
+objective_sic_bin_analysis/
+environment_sic_bin_analysis/
 
 # Editor and operating-system files.
 .DS_Store

@@ -41,6 +41,12 @@ gain from adding a place-by-gaze interaction to an additive place-and-gaze
 model. Unit categories are secondary descriptive summaries. Network seed, not
 hidden unit or timestep, is the inferential replicate.
 
+The supplementary SIC workflow uses the same frozen checkpoints. It reports
+performance for every true place and gaze-surface bin, then measures Skaggs
+information in each hidden unit relative to untrained-network nulls evaluated
+on identical probe inputs. SIC dual selectivity and nonlinear interaction gain
+are kept as distinct concepts.
+
 ### 4. Open and occluded environments
 
 The environmental comparison uses the factorized objective only. Five paired
@@ -54,6 +60,7 @@ measure of occlusion.
 
 ```text
 continuous_baseline/       Historical continuous-coordinate comparison
+analysis/                  Shared SIC implementation and helpers
 objective_comparison/      Clean 8,000-update objective experiment
 environment_comparison/    Noisy open-versus-occluded experiment
 configs/                   Machine-readable experimental specifications
@@ -109,6 +116,7 @@ frozen analysis with:
 
 ```bash
 sbatch run_frozen_hidden_h100.slurm
+sbatch run_sic_bins_h100.slurm
 ```
 
 ## Reproducing the environmental comparison
@@ -117,6 +125,7 @@ From `environment_comparison/`:
 
 ```bash
 bash submit_environment_comparison.sh
+sbatch run_sic_bins_h100.slurm
 ```
 
 ## Results and checkpoints

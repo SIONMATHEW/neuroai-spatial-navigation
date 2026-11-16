@@ -13,9 +13,11 @@ def test_expected_entry_points_exist() -> None:
     expected = [
         "objective_comparison/compare_tuned_models.py",
         "objective_comparison/evaluate_frozen_hidden.py",
+        "objective_comparison/evaluate_sic_bins.py",
         "objective_comparison/submit_tuned_comparison.sh",
         "environment_comparison/train_environments.py",
         "environment_comparison/evaluate_environments.py",
+        "environment_comparison/evaluate_sic_bins.py",
         "environment_comparison/submit_environment_comparison.sh",
     ]
     assert all((ROOT / path).is_file() for path in expected)
